@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "title": "Notebook",
+    "description": "Notebook HP 15s",
+    "price": 150000,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_939115-MLA45020214253_102020-O.webp",
+    "code": 123456,
+    "stock": 10
+  }
+]
