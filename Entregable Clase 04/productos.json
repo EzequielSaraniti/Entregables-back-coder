@@ -7,5 +7,14 @@
     "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_939115-MLA45020214253_102020-O.webp",
     "code": 123456,
     "stock": 10
+  },
+  {
+    "id": 2,
+    "title": "Monitor",
+    "description": "Monitor Samsung 245",
+    "price": 100000,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_939115-MLA45020214253_102020-O.webp",
+    "code": 3312,
+    "stock": 10
   }
 ]

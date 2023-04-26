@@ -6,7 +6,7 @@ class ProductManager {
 
   //method to add products to our variable products
   addProduct(title, description, price, thumbnail, code, stock) {
-    if (title ?? description ?? price ?? thumbnail ?? code ?? stock) {
+    if (title && description && price && thumbnail && code && stock) {
       if (this.products.find((product) => product.code === code)) {
         console.log("The product already exists");
       } else {

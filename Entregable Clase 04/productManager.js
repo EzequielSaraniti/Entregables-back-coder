@@ -1,7 +1,6 @@
 const fs = require("fs")
 
-class ProductManager {
-    //contructor clear
+ class ProductManager {
     constructor(path) {
         this.path = path;
         if (fs.existsSync(path)) {
@@ -10,20 +9,20 @@ class ProductManager {
             this.products = productsFile
         } else {
             fs.writeFileSync(path, "[]")
-            this.products = productsFile
+            this.products = []
         }
 
 
     }
 
     //method to add products to our variable products
-    addProduct(title, description, price, thumbnail, code, stock) {
+    async addProduct(title, description, price, thumbnail, code, stock) {
         if (title && description && price && thumbnail && code && stock) {
             if (this.products.find((product) => product.code === code)) {
                 return ("The product already exists");
             } else {
                 this.products.push({
-                    id: this.products.length + 1,
+                    id: this.products.length > 0 ? this.products[this.products.length - 1].id + 1 : 1,
                     title: title,
                     description: description,
                     price: price,
@@ -32,21 +31,21 @@ class ProductManager {
                     stock: stock,
                 });
                 const productsString = JSON.stringify(this.products, null, 2)
-                fs.writeFileSync(this.path, productsString)
+                await fs.promises.writeFile(this.path, productsString)
             }
         }
     }
 
     //method to know products within our variable products
-    getProducts() {
-        const productsString = fs.readFileSync(this.path, "utf-8")
+    async getProducts() {
+        const productsString = await fs.promises.readFile(this.path, "utf-8")
         const productsFile = JSON.parse(productsString)
         return productsFile
     }
 
     //method to know a product within our variable products
-    getProductById(id) {
-        const productsString = fs.readFileSync(this.path, "utf-8")
+    async getProductById(id) {
+        const productsString = await fs.promises.readFile(this.path, "utf-8")
         const productsFile = JSON.parse(productsString)
         const product = productsFile.find((product) => product.id === id);
         if (product) {
@@ -57,33 +56,30 @@ class ProductManager {
     }
 
     //method for update product
-    updateProduct(id, title, description, price, thumbnail, code, stock) {
-        const productsString = fs.readFileSync(this.path, "utf-8")
+    async updateProduct(id, object) {
+        const productsString = await fs.promises.readFile(this.path, "utf-8")
         const productsFile = JSON.parse(productsString)
         const product = productsFile.find((product) => product.id === id);
         if (product) {
-            product.title = title
-            product.description = description
-            product.price = price
-            product.thumbnail = thumbnail
-            product.code = code
-            product.stock = stock
+            const updateProduct = {...product, ...object}
+            const index = productsFile.indexOf(product)
+            productsFile.splice(index, 1, updateProduct)
             const productsString = JSON.stringify(productsFile, null, 2)
-            fs.writeFileSync(this.path, productsString)
+            await fs.promises.writeFile(this.path, productsString)
             return product
         }
     }
 
     //method for delete product
-    deleteProduct(id) {
-        const productsString = fs.readFileSync(this.path, "utf-8")
+    async deleteProduct(id) {
+        const productsString = await fs.promises.readFile(this.path, "utf-8")
         const productsFile = JSON.parse(productsString)
         const product = productsFile.find((product) => product.id === id);
         if (product) {
             const index = productsFile.indexOf(product)
             productsFile.splice(index, 1)
             const productsString = JSON.stringify(productsFile, null, 2)
-            fs.writeFileSync(this.path, productsString)
+            await fs.promises.writeFile(this.path, productsString)
             return product
         }
     }
@@ -101,23 +97,22 @@ productManager.addProduct(
 );
 
 // //We add product with repeated code to generate error
-// productManager.addProduct(
-//     "Monitor",
-//     "Monitor Samsung 24",
-//     100000,
-//     "https://http2.mlstatic.com/D_NQ_NP_2X_939115-MLA45020214253_102020-O.webp",
-//     3312,
-//     10
-// );
-
-productManager.updateProduct(
-    2,
+productManager.addProduct(
     "Monitor",
-    "Monitor Samsung 23",
+    "Monitor Samsung 24",
     100000,
     "https://http2.mlstatic.com/D_NQ_NP_2X_939115-MLA45020214253_102020-O.webp",
     3312,
     10
+);
+
+productManager.updateProduct(
+    2,
+    {
+        title: "Monitor",
+        description: "Monitor Samsung 245",
+        price: 100000,
+    }
 );
 
 // //we add product
@@ -137,4 +132,4 @@ productManager.getProducts();
 productManager.getProductById(2);
 
 //delete product
-productManager.deleteProduct(2);
+// productManager.deleteProduct(2);
