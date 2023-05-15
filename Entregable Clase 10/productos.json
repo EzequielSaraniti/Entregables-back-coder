@@ -4,7 +4,7 @@
     "title": "Pelota",
     "description": "La utilizó Maradona",
     "price": 50008,
-    "thumbnail": "https://www.digitalsport.com.ar/files/products/624b1bc16431e-565339-1200x1200.jpg",
+    "thumbnails": "https://www.digitalsport.com.ar/files/products/624b1bc16431e-565339-1200x1200.jpg",
     "code": "76237-228",
     "stock": 1
   },
@@ -13,7 +13,7 @@
     "title": "Pizza",
     "description": "La comio lio Messi",
     "price": 1027,
-    "thumbnail": "https://previews.123rf.com/images/gubernat/gubernat1801/gubernat180100145/93634660-una-porci%C3%B3n-mordida-de-pizza-de-pepperoni-en-un-plato-sobre-una-tabla-de-madera.jpg",
+    "thumbnails": "https://previews.123rf.com/images/gubernat/gubernat1801/gubernat180100145/93634660-una-porci%C3%B3n-mordida-de-pizza-de-pepperoni-en-un-plato-sobre-una-tabla-de-madera.jpg",
     "code": "62584-994",
     "stock": 82
   },
@@ -21,42 +21,42 @@
     "id": 3,
     "title": "Mate Argentino",
     "price": 500,
-    "thumbnail": "https://cdn.shopify.com/s/files/1/0490/7053/8901/products/1_32a3079f-d346-42db-8ddc-28d05fc73a60_600x.png?v=1651084480"
+    "thumbnails": "https://cdn.shopify.com/s/files/1/0490/7053/8901/products/1_32a3079f-d346-42db-8ddc-28d05fc73a60_600x.png?v=1651084480"
   },
   {
     "id": 4,
     "title": "Mate Argentino",
     "price": 1500,
-    "thumbnail": "https://cdn.shopify.com/s/files/1/0490/7053/8901/products/1_32a3079f-d346-42db-8ddc-28d05fc73a60_600x.png?v=1651084480"
+    "thumbnails": "https://cdn.shopify.com/s/files/1/0490/7053/8901/products/1_32a3079f-d346-42db-8ddc-28d05fc73a60_600x.png?v=1651084480"
   },
   {
     "id": 5,
     "title": "Mate Argentino",
     "price": 20500,
-    "thumbnail": "https://cdn.shopify.com/s/files/1/0490/7053/8901/products/1_32a3079f-d346-42db-8ddc-28d05fc73a60_600x.png?v=1651084480"
+    "thumbnails": "https://cdn.shopify.com/s/files/1/0490/7053/8901/products/1_32a3079f-d346-42db-8ddc-28d05fc73a60_600x.png?v=1651084480"
   },
   {
     "id": 6,
     "title": "Mate Argentino",
     "price": 600,
-    "thumbnail": "https://cdn.shopify.com/s/files/1/0490/7053/8901/products/1_32a3079f-d346-42db-8ddc-28d05fc73a60_600x.png?v=1651084480"
+    "thumbnails": "https://cdn.shopify.com/s/files/1/0490/7053/8901/products/1_32a3079f-d346-42db-8ddc-28d05fc73a60_600x.png?v=1651084480"
   },
   {
     "id": 7,
     "title": "Mate Argentino",
     "price": 600,
-    "thumbnail": "https://cdn.shopify.com/s/files/1/0490/7053/8901/products/1_32a3079f-d346-42db-8ddc-28d05fc73a60_600x.png?v=1651084480"
+    "thumbnails": "https://cdn.shopify.com/s/files/1/0490/7053/8901/products/1_32a3079f-d346-42db-8ddc-28d05fc73a60_600x.png?v=1651084480"
   },
   {
     "id": 8,
     "title": "Mate Argentino",
     "price": 1500,
-    "thumbnail": "https://cdn.shopify.com/s/files/1/0490/7053/8901/products/1_32a3079f-d346-42db-8ddc-28d05fc73a60_600x.png?v=1651084480"
+    "thumbnails": "https://cdn.shopify.com/s/files/1/0490/7053/8901/products/1_32a3079f-d346-42db-8ddc-28d05fc73a60_600x.png?v=1651084480"
   },
   {
     "id": 9,
     "title": "Gol de Messi",
     "price": 150000,
-    "thumbnail": "https://media.tycsports.com/files/2023/03/23/548522/el-gol-800-de-messi_1440x810_wmk.webp?v=1"
+    "thumbnails": "https://media.tycsports.com/files/2023/03/23/548522/el-gol-800-de-messi_1440x810_wmk.webp?v=1"
   }
 ]

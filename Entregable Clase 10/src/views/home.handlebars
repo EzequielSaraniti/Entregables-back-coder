@@ -1,13 +1,19 @@
 <div>
-    {{!-- <h1>Hola {{name}}!!</h1> --}}
-    {{#if data}}
-        <h1>Productos</h1>
-        {{#each data}}
-        <div>
-            <h3>Name: {{this.title}}</h3>
+  {{#if data}}
+    <h1 class="textProducts">Productos</h1>
+    <div class="products-container" id="products">
+    {{#each data}}
+      <div class="card" style="width: 18rem;">
+        <img src={{thumbnails}} class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">${{price}}</p>
+          <a href="#" class="btn btn-primary">Add to cart</a>
         </div>
-        {{/each}}
-        {{else}}
-        No hay productos
-        {{/if}}
+      </div>
+    {{/each}}
+    </div>
+  {{else}}
+    No hay productos
+  {{/if}}
 </div>
