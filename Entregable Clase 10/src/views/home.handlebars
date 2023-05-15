@@ -1,0 +1,13 @@
+<div>
+    {{!-- <h1>Hola {{name}}!!</h1> --}}
+    {{#if data}}
+        <h1>Productos</h1>
+        {{#each data}}
+        <div>
+            <h3>Name: {{this.title}}</h3>
+        </div>
+        {{/each}}
+        {{else}}
+        No hay productos
+        {{/if}}
+</div>

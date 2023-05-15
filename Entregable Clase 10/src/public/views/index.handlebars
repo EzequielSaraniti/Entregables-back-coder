@@ -1,0 +1,13 @@
+<div>
+    {{!-- <h1>Hola {{name}}!!</h1> --}}
+    {{#if usuario.isAdmin}}
+        <h1>ES ADMIN</h1>
+        {{#each datos}}
+        <div>
+            <h3>Hola {{this.name}}!!</h3>
+        </div>
+        {{/each}}
+        {{else}}
+        NO ES ADMIN
+        {{/if}}
+</div>
